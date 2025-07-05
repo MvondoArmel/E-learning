@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOTC - Checkout</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'totc-teal': '#4ECDC4',
+                        'totc-blue': '#3B82F6',
+                        'totc-dark': '#2D3748',
+                        'totc-gray': '#6B7280'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="w-8 h-8 bg-totc-teal transform rotate-45 mr-3"></div>
+                    <span class="text-xl font-bold text-totc-dark">TOTC</span>
+                </div>
+                
+                <!-- Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#" class="text-gray-700 hover:text-totc-teal">Home</a>
+                    <a href="#" class="text-gray-700 hover:text-totc-teal">Courses</a>
+                    <a href="#" class="text-gray-700 hover:text-totc-teal">Careers</a>
+                    <a href="#" class="text-gray-700 hover:text-totc-teal">Blog</a>
+                    <a href="#" class="text-gray-700 hover:text-totc-teal">About Us</a>
+                </nav>
+                
+                <!-- User Profile -->
+                <div class="flex items-center space-x-2">
+                    <img src="https://images.unsplash.com/photo-1494790108755-2616b9b1b117?w=40&h=40&fit=crop&crop=face" 
+                         alt="User Avatar" class="w-8 h-8 rounded-full">
+                    <span class="text-gray-700 font-medium">Lina</span>
+                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Checkout Form -->
+            <div class="lg:col-span-2">
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <h2 class="text-2xl font-bold text-totc-dark mb-6">Checkout</h2>
+                    
+                    <!-- Cart Type -->
+                    <div class="mb-6">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Cart Type</label>
+                        <div class="flex space-x-4">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" class="h-8">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/American_Express_logo_%282018%29.svg" alt="American Express" class="h-8">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa" class="h-8">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" class="h-8">
+                        </div>
+                    </div>
+                    
+                    <!-- Form Fields -->
+                    <div class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Name on Card</label>
+                            <input type="text" placeholder="Enter name on Card" 
+                                   class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-totc-teal focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Card Number</label>
+                            <input type="text" placeholder="Enter Card Number" 
+                                   class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-totc-teal focus:border-transparent">
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Expiration Date (MM/YY)</label>
+                                <input type="text" placeholder="Enter Expiration Date" 
+                                       class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-totc-teal focus:border-transparent">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">CVC</label>
+                                <input type="text" placeholder="Enter CVC" 
+                                       class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-totc-teal focus:border-transparent">
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <input type="checkbox" id="save-info" class="h-4 w-4 text-totc-teal focus:ring-totc-teal border-gray-300 rounded">
+                            <label for="save-info" class="ml-2 block text-sm text-gray-700">
+                                Save my information for faster checkout
+                            </label>
+                        </div>
+                        
+                        <button class="w-full bg-totc-teal text-white py-3 px-4 rounded-md hover:bg-opacity-90 transition-colors font-medium">
+                            Confirm Payment
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Order Summary -->
+            <div class="lg:col-span-1">
+                <div class="bg-blue-50 rounded-lg p-6">
+                    <h3 class="text-lg font-semibold text-totc-dark mb-4">Summary</h3>
+                    
+                    <div class="space-y-4">
+                        <!-- Item 1 -->
+                        <div class="flex space-x-3">
+                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=80&h=60&fit=crop" 
+                                 alt="Course" class="w-16 h-12 rounded object-cover">
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-700">adipiscing elit, sed do eiusmod tempor</p>
+                                <p class="text-xs text-gray-500">Lorem ipsum dolor...</p>
+                                <p class="text-sm font-semibold text-totc-dark">$24.69</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Item 2 -->
+                        <div class="flex space-x-3">
+                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=80&h=60&fit=crop" 
+                                 alt="Course" class="w-16 h-12 rounded object-cover">
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-700">sed do eiusmod tempor adipiscing elit</p>
+                                <p class="text-xs text-gray-500">Lorem ipsum dolor...</p>
+                                <p class="text-sm font-semibold text-totc-dark">$24.69</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 pt-4 border-t border-gray-200 space-y-2">
+                        <div class="flex justify-between text-sm">
+                            <span class="text-gray-700">Subtotal</span>
+                            <span class="text-totc-dark font-medium">$51.38</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-gray-700">Coupon Discount</span>
+                            <span class="text-totc-dark font-medium">0 %</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-gray-700">TAX</span>
+                            <span class="text-totc-dark font-medium">5</span>
+                        </div>
+                        <div class="flex justify-between text-lg font-semibold pt-2 border-t border-gray-200">
+                            <span class="text-totc-dark">Total</span>
+                            <span class="text-totc-dark">$56.38</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Education Offers Section -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="flex justify-between items-center mb-8">
+            <h2 class="text-2xl font-bold text-totc-dark">Top Education offers and deals are listed here</h2>
+            <a href="#" class="text-totc-teal hover:underline font-medium">See all</a>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Offer 1 -->
+            <div class="relative bg-white rounded-lg shadow-sm overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=200&fit=crop" 
+                     alt="Education Offer" class="w-full h-48 object-cover">
+                <div class="absolute top-4 left-4 bg-totc-teal text-white px-3 py-1 rounded-md font-bold text-lg">
+                    50%
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4">
+                    <h3 class="font-bold text-lg mb-2">Lorem ipsum dolor</h3>
+                    <p class="text-sm opacity-90">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                    <p class="text-xs opacity-75 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                </div>
+            </div>
+            
+            <!-- Offer 2 -->
+            <div class="relative bg-white rounded-lg shadow-sm overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=200&fit=crop" 
+                     alt="Education Offer" class="w-full h-48 object-cover">
+                <div class="absolute top-4 left-4 bg-totc-teal text-white px-3 py-1 rounded-md font-bold text-lg">
+                    10%
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4">
+                    <h3 class="font-bold text-lg mb-2">Lorem ipsum dolor</h3>
+                    <p class="text-sm opacity-90">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                    <p class="text-xs opacity-75 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                </div>
+            </div>
+            
+            <!-- Offer 3 -->
+            <div class="relative bg-white rounded-lg shadow-sm overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1574021808161-0b3ea9b45dd5?w=400&h=200&fit=crop" 
+                     alt="Education Offer" class="w-full h-48 object-cover">
+                <div class="absolute top-4 left-4 bg-totc-teal text-white px-3 py-1 rounded-md font-bold text-lg">
+                    50%
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4">
+                    <h3 class="font-bold text-lg mb-2">Lorem ipsum dolor</h3>
+                    <p class="text-sm opacity-90">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                    <p class="text-xs opacity-75 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="text-center">
+                <!-- Logo -->
+                <div class="flex justify-center items-center mb-8">
+                    <div class="w-8 h-8 bg-totc-teal transform rotate-45 mr-3"></div>
+                    <span class="text-xl font-bold">TOTC</span>
+                </div>
+                
+                <div class="mb-8">
+                    <p class="text-lg font-medium mb-2">Virtual Class</p>
+                    <p class="text-gray-300">for Zoom</p>
+                </div>
+                
+                <!-- Newsletter -->
+                <div class="mb-8">
+                    <p class="text-gray-300 mb-4">Subscribe to get our Newsletter</p>
+                    <div class="flex max-w-md mx-auto">
+                        <input type="email" placeholder="Your Email" 
+                               class="flex-1 px-4 py-2 bg-gray-700 border border-gray-600 rounded-l-md focus:outline-none focus:ring-2 focus:ring-totc-teal focus:border-transparent">
+                        <button class="bg-totc-teal text-white px-6 py-2 rounded-r-md hover:bg-opacity-90 transition-colors">
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Footer Links -->
+                <div class="flex justify-center space-x-8 mb-8">
+                    <a href="#" class="text-gray-300 hover:text-totc-teal">Careers</a>
+                    <a href="#" class="text-gray-300 hover:text-totc-teal">Privacy Policy</a>
+                    <a href="#" class="text-gray-300 hover:text-totc-teal">Terms & Conditions</a>
+                </div>
+                
+                <!-- Copyright -->
+                <p class="text-gray-400 text-sm">© 2021 Class Technologies Inc.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
