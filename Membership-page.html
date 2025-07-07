@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOTC - Online Coaching Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4ECDC4',
+                        secondary: '#45B7AF',
+                        dark: '#2C3E50',
+                        lightgray: '#F8F9FA'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-white">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <div class="bg-primary rounded-full w-12 h-12 flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">TOTC</span>
+                    </div>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#" class="text-gray-700 hover:text-primary">Home</a>
+                    <a href="#" class="text-gray-700 hover:text-primary">Courses</a>
+                    <a href="#" class="text-gray-700 hover:text-primary">Careers</a>
+                    <a href="#" class="text-gray-700 hover:text-primary">Blog</a>
+                    <a href="#" class="text-gray-700 hover:text-primary">About Us</a>
+                </nav>
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center space-x-2">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b9db2b7c?w=40&h=40&fit=crop&crop=face" alt="Profile" class="w-8 h-8 rounded-full">
+                        <span class="text-gray-700">Lina</span>
+                        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Pricing Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-primary mb-4">Affordable pricing</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Free Plan -->
+                <div class="bg-white rounded-lg border border-gray-200 p-8 text-center">
+                    <div class="mb-6">
+                        <span class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm">Like other</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Free</h3>
+                    <p class="text-gray-500 mb-6">$0/month</p>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-gray-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-600">Components-driven system</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-gray-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-600">Sales-boosting landing pages</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-gray-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-600">Awesome Figma assets pack</span>
+                        </li>
+                    </ul>
+                    
+                    <button class="w-full bg-gray-100 text-gray-600 py-3 rounded-lg font-medium hover:bg-gray-200 transition">
+                        Try for free
+                    </button>
+                </div>
+
+                <!-- Most Popular Plan -->
+                <div class="bg-white rounded-lg border-2 border-primary p-8 text-center relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-primary text-white px-4 py-2 rounded-full text-sm">Most Popular</span>
+                    </div>
+                    <div class="mb-6 mt-4">
+                        <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">Save 30%</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">$24</h3>
+                    <p class="text-gray-500 mb-6">/month</p>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-600">Components-driven system</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-600">Sales-boosting landing pages</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-600">Awesome Figma assets pack</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-600">Themed into 3 different styles</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-600">Will help to learn Figma</span>
+                        </li>
+                    </ul>
+                    
+                    <button class="w-full bg-primary text-white py-3 rounded-lg font-medium hover:bg-secondary transition">
+                        Regular license
+                    </button>
+                </div>
+
+                <!-- Premium Plan -->
+                <div class="bg-white rounded-lg border border-gray-200 p-8 text-center">
+                    <div class="mb-6">
+                        <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">Extended</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">$12</h3>
+                    <p class="text-gray-500 mb-6">/month</p>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-600">Components-driven system</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-600">Sales-boosting landing pages</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-600">Awesome Figma assets pack</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-600">Themed into 3 different styles</span>
+                        </li>
+                    </ul>
+                    
+                    <button class="w-full bg-gray-100 text-gray-600 py-3 rounded-lg font-medium hover:bg-gray-200 transition">
+                        Extended license
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Online Coaching Section -->
+    <section class="py-20 bg-dark text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-6">Online coaching lessons for remote learning.</h2>
+            <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor
+                sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            </p>
+            <button class="bg-primary text-white px-8 py-3 rounded-lg font-medium hover:bg-secondary transition">
+                Start learning now
+            </button>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Online coaching lessons for remote learning</h2>
+            
+            <div class="space-y-8">
+                <div class="flex items-center justify-between border-b border-gray-200 pb-6">
+                    <div class="flex items-center space-x-4">
+                        <div class="bg-primary rounded-full w-8 h-8 flex items-center justify-center">
+                            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <span class="text-lg font-medium">Lorem ipsum dolor sit amet</span>
+                    </div>
+                    <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </div>
+                
+                <div class="flex items-center justify-between border-b border-gray-200 pb-6">
+                    <div class="flex items-center space-x-4">
+                        <div class="bg-primary rounded-full w-8 h-8 flex items-center justify-center">
+                            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <span class="text-lg font-medium">Consectetur adipiscing elit, sed do</span>
+                    </div>
+                    <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </div>
+                
+                <div class="border-b border-gray-200 pb-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-primary rounded-full w-8 h-8 flex items-center justify-center">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <span class="text-lg font-medium">Eiusmod tempor Lorem ipsum</span>
+                        </div>
+                        <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </div>
+                    <div class="pl-12">
+                        <p class="text-gray-600">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="flex items-center justify-between border-b border-gray-200 pb-6">
+                    <div class="flex items-center space-x-4">
+                        <div class="bg-primary rounded-full w-8 h-8 flex items-center justify-center">
+                            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <span class="text-lg font-medium">Lorem ipsum dolor sit amet</span>
+                    </div>
+                    <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-lightgray">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">What our students have to say</h2>
+            
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face" alt="Bulkin Simons" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold">Bulkin Simons</h4>
+                            <p class="text-gray-500 text-sm">Student</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut, sed do eiusmod tempor incididunt ut
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b9db2b7c?w=60&h=60&fit=crop&crop=face" alt="Bulkin Simons" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold">Bulkin Simons</h4>
+                            <p class="text-gray-500 text-sm">Student</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut, sed do eiusmod tempor incididunt ut
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&h=60&fit=crop&crop=face" alt="Bulkin Simons" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold">Bulkin Simons</h4>
+                            <p class="text-gray-500 text-sm">Student</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut, sed do eiusmod tempor incididunt ut
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&h=60&fit=crop&crop=face" alt="Bulkin Simons" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold">Bulkin Simons</h4>
+                            <p class="text-gray-500 text-sm">Student</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut, sed do eiusmod tempor incididunt ut
+                    </p>
+                </div>
+            </div>
+            
+            <div class="flex justify-center mt-8 space-x-2">
+                <button class="bg-primary text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-secondary transition">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                </button>
+                <button class="bg-primary text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-secondary transition">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Section -->
+    <section class="py-20 bg-dark text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between mb-8">
+                <h2 class="text-3xl font-bold">APP is available for free</h2>
+                <div class="flex space-x-4">
+                    <button class="bg-primary text-white px-6 py-3 rounded-lg font-medium hover:bg-secondary transition">
+                        Android app
+                    </button>
+                    <button class="bg-green-500 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-600 transition">
+                        iOS app
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Become Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop" alt="Become a Teacher" class="w-full h-80 object-cover rounded-lg">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 rounded-lg"></div>
+                    <div class="absolute bottom-6 left-6 text-white">
+                        <h3 class="text-2xl font-bold mb-2">Become a Teacher</h3>
+                        <p class="text-gray-200 mb-4">
+                            Class, launched less than a year ago by Blackboard co-founder
+                            Michael Chasen, integrates exclusively...
+                        </p>
+                        <button class="bg-primary text-white px-6 py-3 rounded-lg font-medium hover:bg-secondary transition">
+                            Apply as Teacher
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop" alt="Become a Coursector" class="w-full h-80 object-cover rounded-lg">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 rounded-lg"></div>
+                    <div class="absolute bottom-6 left-6 text-white">
+                        <h3 class="text-2xl font-bold mb-2">Become a Coursector</h3>
+                        <p class="text-gray-200 mb-4">
+                            Class, launched less than a year ago by Blackboard co-founder
+                            Michael Chasen, integrates exclusively...
+                        </p>
+                        <button class="bg-primary text-white px-6 py-3 rounded-lg font-medium hover:bg-secondary transition">
+                            Apply as Coursector
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center mb-12">
+                <div class="flex items-center space-x-4">
+                    <div class="bg-primary rounded-full w-12 h-12 flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">TOTC</span>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold">Virtual Class</h3>
+                        <p class="text-gray-400">for Zoom</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mb-12">
+                <h3 class="text-xl font-semibold mb-4">Subscribe to get our Newsletter</h3>
+                <div class="flex max-w-md">
+                    <input type="email" placeholder="Your Email" class="flex-1 px-4 py-3 rounded-l-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-primary">
+                    <button class="bg-primary text-white px-6 py-3 rounded-r-lg font-medium hover:bg-secondary transition">
+                        Subscribe
+                    </button>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="flex space-x-6 mb-4 md:mb-0">
+                        <a href="#" class="text-gray-400 hover:text-white">Careers</a>
+                        <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-white">Terms & Conditions</a>
+                    </div>
+                    <p class="text-gray-400">© 2021 Class Technologies Inc.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
